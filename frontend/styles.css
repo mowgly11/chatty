@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap');
+
+:root {
+    --color-60: #edf6f9;
+    --color-30: #83c5be;
+    --color-10: #006d77;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Afacad Flux", sans-serif;
+    /*border: 1px green solid;*/
+}
+
+body {
+    background-color: var(--color-60);
+}
+
+header {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+}
+
+nav {
+    padding: 10px;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 23px;
+    margin: 10px 30px;
+    padding: 5px 0;
+    color: black;
+    transition: 0.3s ease;
+    position: relative;
+}
+
+nav a::after {
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-30);
+    transition: 0.4s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+.logoandtitle {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logoandtitle h1 {
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.main-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.chatarea {
+    width: 70%;
+    height: 70%;
+    border-radius: 20px;
+    padding: 30px 30px;
+    box-shadow: 3px 5px 12px rgb(55, 55, 55);
+    background-color: var(--color-30);
+    display: flex;
+    flex-direction: column;
+    scrollbar-width: none;
+    overflow: auto;
+    -ms-overflow-style: none;
+}
+
+.userMessage {
+    color: black;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 13px;
+    font-size: 20px;
+    align-self: end;
+    margin-bottom: 5px;
+    max-width: 75ch;
+}
+
+.botMessage {
+    color: white;
+    padding: 10px 20px;
+    background-color: var(--color-10);
+    border-radius: 13px;
+    font-size: 20px;
+    align-self: start;
+    margin-bottom: 5px;
+    max-width: 75ch;
+}
+
+.messagingArea {
+    width: 70%;
+    height: 5%;
+    background-color: var(--color-30);
+    margin-top: 5px;
+    border-radius: 20px;
+    box-shadow: 3px 5px 12px rgb(55, 55, 55);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 30px;
+}
+
+.messagingArea input {
+    width: 90%;
+    height: 100%;
+    border-radius: 7px;
+    padding: 5px 7px;
+    border: 0;
+    font-size: 20px;
+    background-color: var(--color-30);
+}
+
+.messagingArea input:focus {
+    outline: none;
+}
+
+.messagingArea a {
+    text-decoration: none;
+    color: white;
+    background-color: var(--color-10);
+    padding: 3px 20px;
+    font-size: 23px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.messagingArea a:hover {
+    box-shadow: 1px 1px 10px var(--color-10);
+}
